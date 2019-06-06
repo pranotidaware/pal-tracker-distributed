@@ -44,6 +44,7 @@ jobs:
       install: skip
       before_script:
         - mysql -uroot < databases/create_databases.sql
+        - chmod +x gradlew
         - ./gradlew testMigrate
       script:
         - APPLICATION=backlog
@@ -63,6 +64,7 @@ jobs:
       install: skip
       before_script:
         - mysql -uroot < databases/create_databases.sql
+        - chmod +x gradlew
         - ./gradlew testMigrate
       script:
         - APPLICATION=registration
@@ -82,6 +84,7 @@ jobs:
       install: skip
       before_script:
         - mysql -uroot < databases/create_databases.sql
+        - chmod +x gradlew
         - ./gradlew testMigrate
       script:
         - APPLICATION=timesheets
@@ -100,7 +103,6 @@ jobs:
         - wget -P applications/allocations-server/build/libs https://github.com/$GITHUB_USERNAME/pal-tracker-distributed/releases/download/$RELEASE_TAG/allocations-server.jar
       before_deploy:
         - cp manifest-allocations.yml manifest.yml
-        - chmod +x gradlew
         - echo "Deploying allocations server $RELEASE_TAG"
       deploy: &cloudfoundry
         provider: cloudfoundry
