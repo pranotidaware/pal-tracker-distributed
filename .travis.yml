@@ -100,6 +100,7 @@ jobs:
         - wget -P applications/allocations-server/build/libs https://github.com/$GITHUB_USERNAME/pal-tracker-distributed/releases/download/$RELEASE_TAG/allocations-server.jar
       before_deploy:
         - cp manifest-allocations.yml manifest.yml
+        - chmod +x gradlew
         - echo "Deploying allocations server $RELEASE_TAG"
       deploy: &cloudfoundry
         provider: cloudfoundry
