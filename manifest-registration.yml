@@ -2,11 +2,11 @@ applications:
 - name: tracker-registration
   path: ./applications/registration-server/build/libs/registration-server.jar
   routes:
-  - route: registration-pal-PD.apps.chicken.pal.pivotal.io
+  - route: registration-pal-PD.apps.pcf.paltraining.perficient.com
   memory: 1G
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: https://tracker-registration.apps.chicken.pal.pivotal.io
+    REGISTRATION_SERVER_ENDPOINT: https://tracker-registration.apps.pcf.paltraining.perficient.com
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 8.+ } }'
   services:
   - tracker-registration-database
