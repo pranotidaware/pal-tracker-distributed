@@ -6,6 +6,6 @@ applications:
   memory: 768M
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: https://backlog-pal-PD.apps.pcf.paltraining.perficient.com
+    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-PD.apps.pcf.paltraining.perficient.com
   services:
   - tracker-backlog-database
