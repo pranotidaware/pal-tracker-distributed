@@ -5,7 +5,5 @@ applications:
   - route: registration-pal-PD.apps.pcf.paltraining.perficient.com
   memory: 768M
   instances: 1
-  env:
-    REGISTRATION_SERVER_ENDPOINT: https://registration-pal-PD.apps.pcf.paltraining.perficient.com
   services:
-  - tracker-registration-database
+  - tracker-service-registry
